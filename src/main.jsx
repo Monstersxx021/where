@@ -3,18 +3,18 @@ import { createRoot } from 'react-dom/client';
 import './styles.css';
 
 const portraits = [
-  { title: 'Portrait Study 01', image: '/assets/portraits/port1.jpeg' },
-  { title: 'Portrait Study 02', image: '/assets/portraits/port2.jpeg' },
-  { title: 'Portrait Study 03', image: '/assets/portraits/port3.jpeg' }
+  { title: 'Portrait Study 01', image: `${import.meta.env.BASE_URL}assets/portraits/port1.jpeg` },
+  { title: 'Portrait Study 02', image: `${import.meta.env.BASE_URL}assets/portraits/port2.jpeg` },
+  { title: 'Portrait Study 03', image: `${import.meta.env.BASE_URL}assets/portraits/port3.jpeg` }
 ];
 
 const designs = [
-  { title: 'Digital Design 01', image: '/assets/designs/des1.jpeg' },
-  { title: 'Digital Design 02', image: '/assets/designs/des2.jpeg' },
-  { title: 'Digital Design 03', image: '/assets/designs/des3.jpeg' },
-  { title: 'Digital Design 04', image: '/assets/designs/des4.jpeg' },
-  { title: 'Digital Design 05', image: '/assets/designs/des5.jpeg' },
-  { title: 'Digital Design 06', image: '/assets/designs/des6.jpeg' }
+  { title: 'Digital Design 01', image: `${import.meta.env.BASE_URL}assets/designs/des1.jpeg` },
+  { title: 'Digital Design 02', image: `${import.meta.env.BASE_URL}assets/designs/des2.jpeg` },
+  { title: 'Digital Design 03', image: `${import.meta.env.BASE_URL}assets/designs/des3.jpeg` },
+  { title: 'Digital Design 04', image: `${import.meta.env.BASE_URL}assets/designs/des4.jpeg` },
+  { title: 'Digital Design 05', image: `${import.meta.env.BASE_URL}assets/designs/des5.jpeg` },
+  { title: 'Digital Design 06', image: `${import.meta.env.BASE_URL}assets/designs/des6.jpeg` }
 ];
 
 const workGroups = [
@@ -148,10 +148,4 @@ function App() {
 }
 
 createRoot(document.getElementById('root')).render(<App />);
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 
-export default defineConfig({
-  plugins: [react()],
-  base: '/where/'
-});
